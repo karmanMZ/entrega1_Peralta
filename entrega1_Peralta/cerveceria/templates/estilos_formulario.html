@@ -1,0 +1,46 @@
+
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido%}
+    <h1>Formulario - agregar estilo</h1>
+
+    {% if miFormulario.errors %}
+    
+    <p style="color: red;"> Estan mal los datos, revisar</p>
+    
+    {% endif %}
+    
+    <form action="estilos_formulario" method="POST">
+        {% csrf_token %}
+
+        <p>Nombre</p>
+        <input type="text" name = "nombre" >
+        <p>Ibu</p>
+        <input type="number" name = "ibu">
+        <p>Alcohol</p>
+        <input type="number" name = "alcohol">
+        <p>Cuerpo</p>
+        <input type="text" name = "cuerpo" >
+        <p>Amargor</p>
+        <input type="text" name = "amargor" >
+        <p>Aroma</p>
+        <input type="text" name = "aroma">
+        <p>Temperatura de consumo</p>
+        <input type="number" name = "temp_cons" >
+    
+
+    
+        <input type="submit" , value="Eviar">
+    
+
+
+    
+    
+    </form>
+{% endblock%}
+
+
+
+

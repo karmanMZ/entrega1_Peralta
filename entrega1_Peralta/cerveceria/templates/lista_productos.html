@@ -1,0 +1,20 @@
+
+
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido%}
+    <h1>Lista de productos registrados</h1>
+        {% for producto in info %}
+
+            <h5 style="color: green">Nombre: {{producto.nombre}} </h5>
+            <h5 style="color: green">Tipo de Producto: {{producto.tipo_producto}} </h5>
+            <h5 style="color: green">Fecha de registro: {{producto.fecha_registro}} </h5>
+
+
+        {% endfor %}
+{% endblock%}
+
+
+

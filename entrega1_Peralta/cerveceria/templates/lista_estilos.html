@@ -1,0 +1,23 @@
+
+
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido%}
+    <h1>Lista de estilos registrados</h1>
+        {% for estilos in info %}
+
+            <h5 style="color: green">Nombre: {{estilos.nombre}} </h5>
+            <h5 style="color: green">Ibu: {{estilos.ibu}} </h5>
+            <h5 style="color: green">Alcohol: {{estilos.alcohol}} </h5>
+            <h5 style="color: green">Cuerpo: {{estilos.cuerpo}} </h5>
+            <h5 style="color: green">Amargor: {{estilos.amargor}} </h5>
+            <h5 style="color: green">Aroma: {{estilos.aroma}} </h5>
+            <h5 style="color: green">Temperatura de consumo: {{estilos.temp_cons}} </h5>
+
+        {% endfor %}
+{% endblock%}
+
+
+

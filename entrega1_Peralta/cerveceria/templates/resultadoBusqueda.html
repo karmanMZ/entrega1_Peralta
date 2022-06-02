@@ -1,0 +1,20 @@
+
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido%}
+    <p>Estilos de cerveza para un nivel de alcohol de: {{alcohol}}</p>
+    {% if estilos %}
+    <ul>
+    {% for estilo in estilos %}
+        <li>{{estilo.nombre}}</li>
+    {% endfor %}
+    </ul>
+    {% else %}
+    <p>No hay estilos disponibles con ese grado de alcohol</p>
+    {% endif %}
+{% endblock%}
+
+
+

@@ -1,0 +1,37 @@
+
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido%}
+    <h1>Formulario - agregar personal al Staff</h1>
+
+        {% if miFormulario.errors %}
+        
+        <p style="color: red;"> Estan mal los datos, revisar</p>
+        
+        {% endif %}
+        
+        <form action="staff_formulario" method="POST">
+            {% csrf_token %}
+
+            <p>Nombre</p>
+            <input type="text" name = "nombre" >
+            <p>Apellido</p>
+            <input type="text" name = "apellido" >
+            <p>Cargo que cumple en la cerveceria</p>
+            <input type="text" name = "cargo">
+            <p>Fecha de Registro del personal</p>
+            <input type="date" name = "fecha_ingreso">
+                   
+
+        
+            <input type="submit" , value="Eviar">
+        
+
+        
+        </form>
+{% endblock%}
+
+
+

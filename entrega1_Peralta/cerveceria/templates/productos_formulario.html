@@ -1,0 +1,38 @@
+
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido%}
+
+    <h1>Formulario - agregar producto</h1>
+
+    {% if miFormulario.errors %}
+    
+    <p style="color: red;"> Estan mal los datos, revisar</p>
+    
+    {% endif %}
+    
+    <form action="productos_formulario" method="POST">
+        {% csrf_token %}
+
+        <p>Nombre</p>
+        <input type="text" name = "nombre" >
+        <p>Tipo de producto</p>
+        <input type="text" name = "tipo_producto">
+        <p>Fecha de Registro del producto</p>
+        <input type="date" name = "fecha_registro">
+                
+
+    
+        <input type="submit" , value="Eviar">
+    
+
+    
+    </form>
+
+{% endblock%}
+
+
+
+

@@ -1,0 +1,22 @@
+
+
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido%}
+    <h1>Lista de personal registrados</h1>
+        {% for staff in info %}
+
+            <h5 style="color: green">Nombre: {{staff.nombre}} </h5>
+            <h5 style="color: green">Apellido: {{staff.apellido}} </h5>
+            <h5 style="color: green">Cargo en la cerveceria: {{staff.cargo}} </h5>
+            <h5 style="color: green">Fecha de ingreso: {{staff.fecha_ingreso}} </h5>
+
+
+        {% endfor %}
+{% endblock%}
+
+
+
+
